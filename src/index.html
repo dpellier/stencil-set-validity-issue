@@ -9,6 +9,20 @@
     <script nomodule src="/build/test-validity.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <label>Required input</label>
+
+    <my-component>
+    </my-component>
+
+    <button>Reset value</button>
+
+    <script>
+      const component = document.querySelector('my-component');
+      const resetButton = document.querySelector('button');
+
+      resetButton.addEventListener('click', () => {
+        component.reset();
+      })
+    </script>
   </body>
 </html>
